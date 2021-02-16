@@ -1,0 +1,4 @@
+{
+    "python.pythonPath": "f:\\Internship\\Assignment\\venv\\Scripts\\python.exe",
+    "python.formatting.provider": "black"
+}

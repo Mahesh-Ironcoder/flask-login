@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block body %}
+<form action="" method="POST" novalidate>
+        <div>Login</div>
+        {{form.hidden_tag()}}
+        <label for="username">{{form.username.label}}</label><br/>
+        {{form.username()}}
+        {% for error in form.username.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+        <br/>
+
+        <label for="password">{{form.password.label}}</label><br/>
+        {{form.password()}}
+        {% for error in form.password.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+        <br/>
+
+        {{form.submit()}}
+        <a href="{{url_for('signup')}}">Create an account</a>
+</form>
+{% endblock %}
